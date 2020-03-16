@@ -6,7 +6,7 @@ const {
 } = process.env
 
 if (SLACK_WEBHOOK && LOG_DIR) {
-  require('./slack')(SLACK_WEBHOOK, LOG_DIR)
+  require('../slack')(SLACK_WEBHOOK, LOG_DIR)
 } else {
   throw new Error('Requires SLACK_WEBHOOK & LOG_DIR env variables')
 }
